@@ -35,7 +35,7 @@ namespace WishList.Controllers
         public IActionResult Register(RegisterViewModel model)
         {
             if (!ModelState.IsValid)
-                return View("Home/Index", model);
+                return View(model);
             var result = _userManager.CreateAsync(new ApplicationUser
             {
                 UserName = model.Email,
